@@ -1,0 +1,23 @@
+apiVersion: v1  
+kind: Pod
+metadata:
+    labels:
+        run: nginx-pod
+    name: nginx-pod
+spec:
+  containers:
+  - image: nginx:latest
+    name: nginx-pod
+
+
+## Notes ##
+# 1) Specifies the Kubernetes API version to use. For a Pod, v1 is the correct API version.
+# 2) Defines the type of Kubernetes object to be created. In this case, it is a Pod.
+# 3) Pod is the smallest deployable unit in Kubernetes and can contain one or more containers.
+# 4) Labels are key-value pairs that help in organizing and selecting resources. 
+# 5) Here, "run: nginx-pod" is a label assigned to the Pod, which can be used for selection or filtering within the cluster.
+# 6) Specifies the "name: nginx-pod", which makes it easier to identify within the cluster.
+# 7) spec: This is where the specification for the Pod’s desired state is defined, including the containers it will run.
+# 8) A list of containers to run in the Pod. In this example, only one container is defined.
+# 9) Specifies the container image to use, which is the latest version of Nginx from the Docker registry.
+# 10) Provides a name for the container within the Pod. It helps in distinguishing this container from others if the Pod contains multiple containers.

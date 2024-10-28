@@ -1,0 +1,38 @@
+commands:
+1) kubectl version 
+-> This command will display the current version of kubectl
+-> kubectl is the official command-line tool for interacting with Kubernetes clusters. 
+-> kubectl is a powerful utility that allows developers, administrators, and operators to manage and control Kubernetes resources,
+   perform cluster operations, and interact with the Kubernetes API server.
+
+2) kubectl cluster-info
+-> This command is used to display the information about k8s cluster.
+-> This command displays the control plane and codeDNS details.
+-> We can verify that the k8s client(kubectl) is successfully connected to the cluster or not.
+
+3) kubectl get nodes
+-> This command is used to list all nodes in a Kubernetes cluster, displaying key details about each node, such as their name, 
+   status, roles, age, and version. 
+-> This command is commonly used for cluster management and to check the health and status of nodes.
+
+4) kubectl get ns | kubectl get namespace | kubectl get namespaces
+-> The above all commands will give the same output.
+-> This cmd is used to list all namespaces in a K8s cluster, displaying details about each namespace, such as its name, status, and age. 
+-> Namespaces in K8s provide a way to divide cluster resources between different users or teams, so this command help you see how the 
+   cluster is logically organized.
+
+5) kubectl get pods | kubectl get pod
+-> This command will list all pods in the default namespace.
+
+6) kubectl get pods -n <name space>
+-> This command will list all pods in the specific namespace.
+
+7) kubectl get pods -o wide
+-> This command will list all pods in the default namespace with additional columns[name, ready, restarts, age, pod IP]
+
+8) kubectl run nginx --image nginx:latest --dry-run=client -o yaml | kubectl neat
+-> This command is used to create a YAML configuration for a K8s pod with the Nginx container but without actually deploying it.
+
+9) kubectl run nginx-pod1 --image nginx:latest 
+-> The above command will create a pod.
+-> Imperative form
